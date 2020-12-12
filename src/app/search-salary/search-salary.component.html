@@ -1,0 +1,36 @@
+<div class="example-container">
+  <form [formGroup]="options">
+
+    <mat-form-field appearance="fill" >
+      <mat-label>minimum salary</mat-label>
+      <input (change)="minChange($event)" matInput type="number" placeholder="minimum salary">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" >
+      <mat-label>maximum salary</mat-label>
+      <input (change)="maxChange($event)" matInput type="number" placeholder="maximum salary">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>sort by:</mat-label>
+      <mat-select [(value)]="sortBy">
+        <mat-option value="id">Id</mat-option>
+        <mat-option value="name">Name</mat-option>
+        <mat-option value="salary">Salary</mat-option>
+        <mat-option value="login">Login</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <label class="example-margin">Order:</label>
+    <mat-radio-group [formControl]="floatLabelControl" [(ngModel)]="order">
+      <mat-radio-button class="example-margin" value="ascending">ascending</mat-radio-button>
+      <mat-radio-button class="example-margin" value="descending">descending</mat-radio-button>
+    </mat-radio-group>
+
+    <button mat-raised-button color="primary" (click)="searchResult()">search</button>
+
+  </form>
+</div>
+
+

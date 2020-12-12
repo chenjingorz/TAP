@@ -1,6 +1,13 @@
-<button
+<!-- <button
   mat-raised-button
   color="accent"
   (click)='openUploadModal()'
 > Upload File </button>
+
+<input type="file" name="File Upload" id="txtFileUpload" 
+        (change)="openUploadModal()" 
+        accept=".csv"/> -->
+
+<input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="csvInputChange($event)" accept=".csv"/>
+<button mat-flat-button color="accent" (click)="csvInput.click()">Upload</button>
 
