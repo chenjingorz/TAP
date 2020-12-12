@@ -1,27 +1,31 @@
-# Assessment
+# Environment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+Angular CLI 10.1.1.
+Angular Material 10.2.7
+MongoDB
 
-## Development server
+# Project
+Project contained the below two tasks
+1. Upload CSV function -- 
+2. Employee dashboard -- using mock data in MongoDB 
+  a. Open MongoDBCompass
+  b. Connect to localhost - mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
+  c. Under "local", create a new collection "employee"
+  d. Import the mock data, change data type of "salary" to "double" and import.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Run the web application
 
-## Code scaffolding
+1. Connect to MongoDB 
+2. Open a CMD in the project, run "server.js" to connect to the database.
+3. Open another CMD, run "ng serve -o" to launch the web application on port 4200.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Task 1
+1. Click on upload button to open the file selection window.
+2. Upon selection, a snack bar will display showing "file is uploading". 
+3. Actual upload functionality is not implemented
 
-## Build
+## Task 2
+1. Select "employee dashboard" at the side bar.
+2. Enter the search criteria, and click "search".
+3. The employee details will be shown according to the search parameters.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
