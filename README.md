@@ -5,7 +5,7 @@
 3. MongoDB
 
 # Project
-Project contained the below two tasks
+Project is implemented using the MEAN stack. It contained the below two functionalities:
 1. Upload CSV function -- 
 2. Employee dashboard -- using mock data in MongoDB  
   2.1 Open MongoDBCompass  
