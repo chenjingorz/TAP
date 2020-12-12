@@ -1,0 +1,26 @@
+<div>
+  <h1 mat-dialog-title>Upload file</h1>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <div>
+        <mat-toolbar>
+          <input matInput [(ngModel)]="fileAttr" readonly name="name" />
+          <input
+            #csvInput
+            hidden="true"
+            type="file"
+            onclick="this.value=null"
+            (change)="csvInputChange($event)"
+            accept=".csv"/>
+          <button mat-flat-button color="primary"
+                  (click)="csvInput.click()"> Choose File </button>
+        </mat-toolbar>
+      </div>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="closeModal()">close</button>
+    <button mat-button (click)="send()" [disabled]="fileAttr === 'Choose File'">upload</button>
+  </div>
+</div>
+

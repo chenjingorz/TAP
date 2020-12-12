@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="sidenav-toolbar">
+  <button mat-icon-button (click)="isExpanded = !isExpanded">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <app-upload-button> </app-upload-button>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container" autosize>
+  <mat-sidenav class="sidenav-sidenav"
+               mode="side"
+               opened="true"
+               (mouseenter)="mouseenter()"
+               (mouseleave)="mouseleave()">
+    <mat-nav-list>
+        <p class="full-width"
+           *ngIf="isExpanded || isShowing"
+           routerLink="/home"
+           routerLinkActive="active">Home Page</p>
+
+        <p class="full-width"
+           *ngIf="isExpanded || isShowing"
+           routerLink="/employeeDashboard"
+           routerLinkActive="active">Employee Dashboard</p>
+    </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+
