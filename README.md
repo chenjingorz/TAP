@@ -1,17 +1,17 @@
 # Environment
 
-Angular CLI 10.1.1.
-Angular Material 10.2.7
-MongoDB
+1. Angular CLI 10.1.1.
+2. Angular Material 10.2.7
+3. MongoDB
 
 # Project
 Project contained the below two tasks
 1. Upload CSV function -- 
-2. Employee dashboard -- using mock data in MongoDB 
-  a. Open MongoDBCompass
-  b. Connect to localhost - mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false
-  c. Under "local", create a new collection "employee"
-  d. Import the mock data, change data type of "salary" to "double" and import.
+2. Employee dashboard -- using mock data in MongoDB  
+  2.1 Open MongoDBCompass  
+  2.2 Connect to localhost - mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false  
+  2.3 Under "local", create a new collection "employee"  
+  2.4 Import the mock data, change data type of "salary" to "double" and import.  
 
 ## Run the web application
 
