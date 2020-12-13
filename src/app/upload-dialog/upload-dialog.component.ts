@@ -21,18 +21,18 @@ export class UploadDialogComponent {
     this.dialogRef.close();
   }
 
-  send(): void{
-    console.log('send');
-    // call the api to send the file. when the get the reply show toast
-    this.RestService.uploadCSV(this.csvFile)
-      .subscribe(response => {
-      if (response === '200'){
-        this.openSnackBar('file uploaded success', 'close');
-        this.closeModal();
-      } else {
-        this.openSnackBar('file uploaded failed', 'close');
-      }});
-  }
+  // send(): void{
+  //   console.log('send');
+  //   // call the api to send the file. when the get the reply show toast
+  //   this.RestService.uploadCSV(this.csvFile)
+  //     .subscribe(response => {
+  //     if (response === '200'){
+  //       this.openSnackBar('file uploaded success', 'close');
+  //       this.closeModal();
+  //     } else {
+  //       this.openSnackBar('file uploaded failed', 'close');
+  //     }});
+  // }
 
 
   openSnackBar(message: string, action: string): void{
@@ -56,5 +56,6 @@ export class UploadDialogComponent {
     } else {
       this.fileAttr = 'Choose File';
     }
+    this.openSnackBar('File uploaded!','Close')
   }
 }
