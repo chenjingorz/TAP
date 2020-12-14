@@ -16,4 +16,5 @@ export class UploadButtonComponent implements OnInit {
   openUploadModal(): void{
     const dialogRef = this.dialog.open(UploadDialogComponent);
   }
+
 }

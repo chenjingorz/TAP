@@ -12,7 +12,7 @@ import {Employee} from '../employee';
 export class SearchSalaryComponent  {
   userData: Employee[];
   options: FormGroup;
-  floatLabelControl = new FormControl('ascending');
+  floatLabelControl = new FormControl();
   searchIsValid: boolean;
   orderParam: string;
   // input variables
@@ -34,7 +34,7 @@ export class SearchSalaryComponent  {
       this.RestService.getUsers(this.minSalary, this.maxSalary, this.orderParam)
         .subscribe(response => {
           console.log(response);
-          if (response) {
+          if (response.length !== 0) {
             this.snackBar.open('data fetched', 'close');
             response.forEach( res => {
               console.log(res);
@@ -42,7 +42,7 @@ export class SearchSalaryComponent  {
               this.userData.push(res);
             });
           } else {
-            this.snackBar.open('data not fetched', 'close');
+            this.snackBar.open('no data fetched', 'close');
           }
       });
     } else {

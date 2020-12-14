@@ -47,6 +47,12 @@ export class UploadDialogComponent {
       this.fileAttr = fileInput.target.files[0].name;
       const file: File = fileInput.target.files[0];
       this.csvFile = file;
+      // const reader: FileReader = new FileReader();
+      // reader.readAsText(file);
+      // reader.onload = (e) => {
+      //   this.csvFile = reader.result as string;
+      //   console.log(this.csvFile);
+      // };
     } else {
       this.fileAttr = 'Choose File';
     }
