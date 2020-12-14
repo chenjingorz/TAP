@@ -17,7 +17,7 @@ Project is implemented using the MEAN stack. It contained the below two function
 <ul>
     <li>Upload CSV function</li>
     <li>Employee dashboard</li>
-<ul>
+</ul>
 
 ## Run the web application
 <ul>
@@ -30,7 +30,7 @@ Project is implemented using the MEAN stack. It contained the below two function
 <ul>
     <li>Click on upload button to open the file selection window.</li>
     <li>Upon selection, a snack bar will display showing "File uploaded!"</li>
-<ul>
+</ul>
 
 ## Task 2
 <ul>
